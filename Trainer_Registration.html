@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Registration</title>
+
+    <style>
+
+        body {
+            background: linear-gradient(to right, #00f2fe, #4a90e2);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 900px;
+            padding: 40px 50px;
+            background:linear-gradient(to right,#7bc6e3, #b28dfc) ;
+            border-radius: 35px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.35);;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Arial Black';
+            font-size: 2.2em;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            grid-gap: 15px 20px;
+            align-items: center;
+        }
+
+
+        label {
+            font-family: 'Arial Black';
+            font-size: 1.1em;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            padding: 10px 15px;
+            border: 2px solid #000;
+            width: 80%;
+            border-radius: 25px;
+            background: #fff;
+            font-size: 1em;
+            outline: none;
+             box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        ::placeholder {
+            color: #666;
+        }
+
+        .gender-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .gender-group label {
+            margin-right: 25px;
+        }
+
+
+        .button-group {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 10px 35px;
+            border-radius: 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+        }
+
+        .button-group a {
+            padding: 12px 45px;
+            border-radius: 30px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 3px 4px 0 rgba(0,0,0,0.4);
+            transition: 0.3s;
+        }
+
+        .button-group a:hover {
+            transform: translateY(-3px);
+            box-shadow: 3px 8px 0 rgba(0,0,0,0.5);
+        }
+        .btn.save {
+            background: #28a745; 
+        }
+
+        .btn.cancel {
+            background: #d9534f; 
+        }
+
+
+        @media (max-width: 575.98px) {
+
+            .form-container {
+                padding: 25px 20px;
+                border-radius: 25px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+                margin-bottom: 20px;
+            }
+
+            form {
+                grid-template-columns: 1fr;
+                grid-gap: 10px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            select,
+            textarea {
+                width: 85%;
+            }
+
+            .gender-group {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .button-group a {
+                width: 35%;
+                display: block;
+                margin: 10px auto;
+                padding: 10px 25px;
+                font-size: 1em;
+            }
+        }
+
+
+        @media (min-width: 576px) and (max-width: 767.98px) {
+
+            .form-container {
+                padding: 30px 25px;
+            }
+
+            form {
+                grid-template-columns: 180px 1fr;
+            }
+
+            .button-group a {
+                padding: 12px 35px;
+                font-size: 18px;
+            }
+        }
+
+
+        @media (min-width: 768px) and (max-width: 991.98px) {
+
+            form {
+                grid-template-columns: 200px 1fr;
+            }
+
+            .button-group a {
+                padding: 12px 40px;
+                font-size: 19px;
+            }
+        }
+
+
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+
+            form {
+                grid-template-columns: 220px 1fr;
+            }
+        }
+
+
+        @media (min-width: 1200px) {
+            
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>TRAINER REGISTRATION</h1>
+
+        <form>
+
+            <label>NAME :-</label>
+            <input type="text" placeholder="Enter Name">
+
+            <label>EMAIL :-</label>
+            <input type="email" placeholder="Enter Email">
+
+            <label>DATE :-</label>
+            <input type="text" placeholder="(mm/dd/yyyy)">
+
+            <label for="qualification">QUALIFICATION :-</label>
+            <select id="qualification" name="qualification">        
+                <option>10th</option>
+                <option>12th</option>
+                <option>Degree</option>
+                <option>Post-Graduation</option>
+            </select>
+
+            <label>GENDER :-</label>
+            <div class="gender-group">
+                <input type="radio" name="gender" id="male"><label for="male">MALE</label>
+                <input type="radio" name="gender" id="female"><label for="female">FEMALE</label>
+            </div>
+
+            <label>CURRENT DESIGNATION :-</label>
+            <input type="text" placeholder="Designation">
+
+            <label>WORK EXPERIENCE :-</label>
+            <textarea placeholder="Enter Work Experience..."></textarea>
+
+            <label>USERNAME :-</label>
+            <input type="text" placeholder="Choose Username">
+
+            <label>PASSWORD :-</label>
+            <input type="password" placeholder="Enter Password">
+
+            <div class="button-group">
+                <a href="#" class="btn save" onclick="RedirectLogin()">Save</a>
+                <a href="index.html" class="btn cancel">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function RedirectLogin(){
+            alert("Success! Your details have been saved successfully.");
+
+            var confirmRedirect = confirm("You are now being redirected to the Login Page.");
+            if (confirmRedirect){
+                window.location.href = "TrainerLogin.html";
+            }
+        }
+    </script>
+
+</body>
+</html>

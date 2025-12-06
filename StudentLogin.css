@@ -1,0 +1,169 @@
+
+.Student-Page {
+    background: linear-gradient(to right, #00f2fe, #a044e2);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+
+    margin: 0;
+}
+
+.Student-Page h1 {
+    font-family: 'Arial Black';
+    text-decoration: underline;
+    color: #000;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+
+.login-box {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 35px 45px;
+    border-radius: 20px;
+    border: 2px solid #000;
+
+
+    max-width: 330px;
+    width: 100%;
+
+    box-shadow: 0px 0px 10px #00000055;
+}
+
+.login-box label {
+    font-weight: bold;
+    font-family: 'Arial Black';
+    font-size: 1.1em;
+    display: block;
+    margin-top: 10px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 2px solid #000;
+    margin-top: 5px;
+    font-size: 1em;
+    outline: none;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: #555;
+}
+
+
+
+.btn-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-box a {
+    text-decoration: none;
+    background: #28a745;
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.btn-box .cancel {
+    background: #d9534f;
+}
+
+
+@media (max-width: 575.98px) {
+
+    .Student-Page h1 {
+        font-size: 1.6em;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .login-box {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .login-box label {
+        font-size: 1em;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    .btn-box a {
+        width: 70%;
+        display: block;
+        margin: 10px auto;
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    .Student-Page h1 {
+        font-size: 1.8em;
+    }
+
+    .login-box {
+        width: 80%;
+        padding: 25px 30px;
+    }
+
+    .btn-box a {
+        padding: 10px 25px;
+        font-size: 1em;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .Student-Page h1 {
+        font-size: 2em;
+    }
+
+    .login-box {
+        max-width: 380px;  
+        padding: 30px 40px;
+    }
+
+    .btn-box a {
+        padding: 12px 28px;
+        font-size: 1.05em;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    .login-box {
+        max-width: 330px; 
+        padding: 35px 45px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    
+}

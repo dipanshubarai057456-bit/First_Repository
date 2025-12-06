@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Login</title>
+    <link rel="stylesheet" href="TrainerLogin.css">
+</head>
+<body class="Trainer-Page">
+
+    <h1>TRAINER LOG IN</h1>
+
+    <div class="trainer-box">
+        <form>
+            <label>NAME:-</label>
+            <input type="text" placeholder="Enter Your Name">
+
+            <label>PASSWORD:-</label>
+            <input type="password" placeholder="Password">
+
+            <div class="trainer-btns">
+                <a href="Trainer_Dashboard.html" onclick="StartDashboard()">Login</a>
+                <a href="index.html" type="reset" class="cancel">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+        <script type="text/javascript">
+            function StartDashboard(){
+                alert("Login Successful! Redirecting you to your dashboard…")
+            }
+
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+
+@media (max-width: 575.98px) {
+
+    body.Index-Page .btn-container {
+        flex-direction: column;
+        gap: 25px;  
+        align-items: center;
+    }
+
+
+    body.Index-Page .btn,
+    body.Index-Page .signup {
+        padding: 12px 30px;
+        font-size: 18px;
+        width: 200px; 
+    }
+
+    
+    body.Index-Page h1 {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    body.Index-Page h2 {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    body.Index-Page .btn-container {
+        gap: 35px;
+    }
+
+    body.Index-Page .btn,
+    body.Index-Page .signup {
+        padding: 14px 35px;
+        font-size: 20px;
+    }
+
+    body.Index-Page h1 { font-size: 26px; }
+    body.Index-Page h2 { font-size: 20px; }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    body.Index-Page .btn-container {
+        gap: 45px;
+    }
+
+    body.Index-Page .btn,
+    body.Index-Page .signup {
+        padding: 15px 40px;
+        font-size: 21px;
+    }
+
+    body.Index-Page h1 { font-size: 28px; }
+    body.Index-Page h2 { font-size: 22px; }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    body.Index-Page .btn-container {
+        gap: 55px;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+   
+}

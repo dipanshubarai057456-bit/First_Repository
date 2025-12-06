@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #44d3f7, #c07df2);
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .form-container {
+            width: 45%;
+            background: rgba(255,255,255,0.08);
+            border: 1.5px solid #ffffff88;
+            margin: 40px auto;
+            padding: 40px 60px;
+            border-radius: 35px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 35px;
+            color: white;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            row-gap: 22px;
+            column-gap: 20px;
+            text-align: left;
+        }
+
+        label {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            margin-top: 5px;
+        }
+
+        input, select, textarea {
+            width: 85%;
+            padding: 12px;
+            border-radius: 25px;
+            border: 2px solid #000;
+            font-size: 18px;
+            box-shadow: 3px 4px 0 rgba(0,0,0,0.4);
+            background: white;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .gender-group {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .gender-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .btn-box {
+            grid-column: 1 / -1;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .btn-box a {
+            padding: 12px 45px;
+            border-radius: 30px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 3px 4px 0 rgba(0,0,0,0.4);
+            transition: 0.3s;
+
+        }
+
+        .btn-box a:hover {
+            transform: translateY(-3px);
+            box-shadow: 3px 8px 0 rgba(0,0,0,0.5);
+        }
+        
+        .btn.save {
+            background-color: #28a745;  
+        }
+
+        .btn.cancel {
+            background-color: #d9534f;  
+        }
+
+
+        @media (max-width: 575.98px) {
+
+            .form-container {
+                width: 90%;
+                padding: 25px 20px;
+                border-radius: 25px;
+            }
+
+            h1 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+
+            form {
+                grid-template-columns: 1fr;
+                row-gap: 15px;
+            }
+
+
+            input, select, textarea {
+                font-size: 16px;
+                width: 90%;
+            }
+
+            .gender-group {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+
+            .btn-box {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-box a {
+                width: 35%;
+                margin: 0 auto;
+                padding: 10px 25px;
+                font-size: 1em;
+
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+
+        @media (min-width: 576px) and (max-width: 767.98px) {
+
+            .form-container {
+                width: 75%;
+                padding: 30px;
+            }
+
+            form {
+                grid-template-columns: 180px 1fr;
+            }
+
+            .btn-box a {
+                padding: 12px 35px;
+                font-size: 18px;
+            }
+        }
+
+
+        @media (min-width: 768px) and (max-width: 991.98px) {
+
+            .form-container {
+                width: 65%;
+            }
+
+            form {
+                grid-template-columns: 200px 1fr;
+            }
+
+            .btn-box a {
+                padding: 12px 40px;
+                font-size: 19px;
+            }
+        }
+
+
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            .form-container {
+                width: 55%;
+            }
+
+            form {
+                grid-template-columns: 220px 1fr;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>EMPLOYEE REGISTRATION</h1>
+
+        <form>
+
+            <label for="name">NAME :-</label>
+            <input type="text" id="name" placeholder="Enter Name">
+
+            <label for="email">EMAIL :-</label>
+            <input type="email" id="email" placeholder="Email">
+
+            <label for="date">DATE :-</label>
+            <input type="text" id="date" placeholder="(mm/dd/yyyy)">
+
+            <label>GENDER :-</label>
+            <div class="gender-group">
+                <label class="gender-option"><input type="radio" name="gender" value="male"> Male</label>
+                <label class="gender-option"><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+
+            <label for="qualification">QUALIFICATION :-</label>
+            <select id="qualification">
+                <option value="10th">10th</option>
+                <option value="12th">12th</option>
+                <option value="degree">Degree</option>
+                <option value="post-grad">Post-Graduation</option>
+            </select>
+
+            <label for="designation">CURRENT DESIGNATION :-</label>
+            <input type="text" id="designation" placeholder="Designation">
+
+            <label for="experience">WORK EXPERIENCE :-</label>
+            <textarea id="experience" placeholder="Enter Work Experience..."></textarea>
+
+            <label for="salary">SALARY :-</label>
+            <input type="text" id="salary" placeholder="Salary">
+
+            <label for="doj">DATE OF JOINING :-</label>
+            <input type="text" id="doj" placeholder="(mm/dd/yyyy)">
+
+            <label for="username">USERNAME :-</label>
+            <input type="text" id="username" placeholder="Username">
+
+            <label for="password">PASSWORD :-</label>
+            <input type="password" id="password" placeholder="Password">
+
+            <div class="btn-box">
+                <a href="#" class="btn save" onclick="RedirectLogin()">Save</a>
+                <a href="index.html" class="btn cancel">Cancel</a>
+            </div>
+
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function RedirectLogin(){
+            alert("Success! Your details have been saved successfully.")
+
+            var confirmRedirect = confirm("You are now being redirected to the Login Page.")
+            if (confirmRedirect){
+                window.location.href = "EmployeeLogin.html";
+            }
+        }
+    </script>
+
+</body>
+</html>
